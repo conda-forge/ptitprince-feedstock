@@ -1,5 +1,5 @@
 {% set name = "ptitprince" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ptitprince-{{ version }}.tar.gz
-  sha256: 1b3dbac736f1180d865b9ae2508f2ce59769fc85800cbee120d2a3cbc67c6368
+  sha256: 0966e0b585b18d2c1975f526f6fa87ab3c8543ccd76da67c74f542e0d97d19ac
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,13 +21,14 @@ requirements:
     - pip
     - python
   run:
+    - python
     - cython
     - matplotlib-base
-    - numpy >=1.13
+    - numpy >=1.16
     - pyhamcrest >=1.9.0
-    - python
     - scipy
-    - seaborn >=0.10
+    - seaborn ==0.11
+    - pandas >=1.0
 
 test:
   imports:
