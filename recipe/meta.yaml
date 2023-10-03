@@ -1,5 +1,5 @@
 {% set name = "ptitprince" %}
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ptitprince-{{ version }}.tar.gz
-  sha256: 0966e0b585b18d2c1975f526f6fa87ab3c8543ccd76da67c74f542e0d97d19ac
+  sha256: bbd19d4f8615935ac1b750651907303913fbdddc3fe864c1cb80faa3a2a3acfb
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
