@@ -11,6 +11,7 @@ source:
   sha256: bbd19d4f8615935ac1b750651907303913fbdddc3fe864c1cb80faa3a2a3acfb
 
 build:
+  noarch: python
   number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,8 +20,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
-    - pip
-    - python
+    - python >=3.8
+    - pip    
     - setuptools
   run:
     - python >=3.8
