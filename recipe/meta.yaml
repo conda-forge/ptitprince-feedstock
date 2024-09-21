@@ -23,10 +23,10 @@ requirements:
     - python
     - setuptools
   run:
-    - python
+    - python >=3.8
     - matplotlib-base <3.9
     - numpy >=1.16
-    - scipy
+    - scipy >=1.0
     - seaborn ==0.11
 
 test:
