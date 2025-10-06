@@ -1,5 +1,5 @@
 {% set name = "ptitprince" %}
-{% set version = "0.2.7" %}
+{% set version = "0.3.1" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ptitprince-{{ version }}.tar.gz
-  sha256: bbd19d4f8615935ac1b750651907303913fbdddc3fe864c1cb80faa3a2a3acfb
+  sha256: 2840a3a1d8daba6567c15ce192d683da75a5d2b648451a1a26b271485b70254d
 
 build:
   noarch: python
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - python {{ python_min }}
-    - pip    
+    - pip
     - setuptools
   run:
     - python >={{ python_min }}
