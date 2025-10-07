@@ -1,5 +1,6 @@
 {% set name = "ptitprince" %}
 {% set version = "0.3.1" %}
+{% set python_min = "3.9" %}
 
 
 package:
@@ -22,13 +23,13 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - hatchling    
   run:
     - python >={{ python_min }}
-    - matplotlib-base <3.9
+    - matplotlib-base >=3.9
     - numpy >=1.16
     - scipy >=1.0
-    - seaborn ==0.11
+    - seaborn >=0.13.2
 
 test:
   imports:
